@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="Future Health Centre for Advanced Surgery coordinates surgical services and hospital collaborations across Kerala.">
+  <title>Future Health Centre for Advanced Surgery</title>
+  <style>
+    :root{--navy:#102b46;--blue:#176b87;--teal:#39a6a0;--ink:#183044;--muted:#617487;--pale:#eef5f7;--white:#fff;--gold:#c8a96a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit;text-decoration:none}.container{width:min(1140px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e5edf1}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);letter-spacing:.04em;line-height:1.2}
+    .brand-mark{width:42px;height:42px;border:2px solid var(--teal);border-radius:13px;display:grid;place-items:center;color:var(--teal);font-size:23px}
+    .brand small{display:block;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:700;margin-top:5px}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:700;color:#425a6c}
+    .navlinks a:hover{color:var(--teal)}.nav-cta,.btn{background:var(--teal);color:#fff;padding:12px 19px;border-radius:7px;font-weight:700;display:inline-block;border:0}
+    .menu{display:none;background:none;border:0;font-size:25px;color:var(--navy)}
+    .hero{background:linear-gradient(115deg,rgba(10,34,57,.96),rgba(17,76,96,.88)),radial-gradient(circle at 80% 20%,#4eb9b1,transparent 38%);color:#fff;padding:105px 0 95px;position:relative;overflow:hidden}
+    .hero:after{content:"✚";position:absolute;right:8%;top:5%;font-size:300px;color:rgba(255,255,255,.045);font-weight:100}
+    .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8fe0d4;font-weight:800}
+    h1{font-size:clamp(38px,5.5vw,66px);line-height:1.08;max-width:780px;margin:18px 0 22px;letter-spacing:-.035em}
+    .hero p{font-size:18px;max-width:650px;color:#d7e6ed;margin:0 0 32px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}.btn-outline{border:1px solid rgba(255,255,255,.55);padding:11px 19px;border-radius:7px;font-weight:700}
+    .hero-note{margin-top:48px;font-size:12px;color:#b9d0db;letter-spacing:.06em}
+    section{padding:82px 0}.section-kicker{color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    h2{font-size:clamp(29px,3.5vw,42px);line-height:1.16;color:var(--navy);margin:12px 0 18px;letter-spacing:-.025em}
+    .intro{font-size:17px;color:var(--muted);max-width:760px}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+    .about-panel{background:var(--pale);padding:34px;border-radius:15px;border:1px solid #e0ecef}
+    .about-panel strong{color:var(--navy)}.about-panel p{color:var(--muted);margin-bottom:0}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
+    .pillar{padding:20px;background:#fff;border:1px solid #e7eef1;border-radius:10px}
+    .pillar b{display:block;color:var(--navy);font-size:15px;margin-bottom:6px}.pillar span{font-size:13px;color:var(--muted)}
+    .soft{background:#f5f9fa}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+    .card{background:#fff;border:1px solid #e3ecef;border-radius:13px;padding:27px;box-shadow:0 8px 25px rgba(17,49,68,.04)}
+    .icon{width:43px;height:43px;border-radius:12px;background:#e4f4f2;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:18px}
+    .card h3{font-size:18px;color:var(--navy);margin:0 0 9px}.card p{font-size:14px;color:var(--muted);margin:0}
+    .notice{margin-top:25px;padding:15px 18px;border-left:3px solid var(--gold);background:#fff9ed;color:#6f5b36;font-size:13px;border-radius:0 8px 8px 0}
+    .coverage{background:linear-gradient(120deg,#102b46,#174d65);color:#fff}
+    .coverage h2{color:#fff}.coverage .intro{color:#d0e0e8}
+    .coverage-box{margin-top:30px;padding:27px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.06);display:flex;align-items:center;gap:20px}
+    .coverage-symbol{font-size:34px;color:#8fe0d4}.coverage-box strong{font-size:22px;display:block}.coverage-box span{font-size:14px;color:#d0e0e8}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}
+    .step{border-top:3px solid var(--teal);padding:22px 18px;background:#f5f9fa;border-radius:0 0 10px 10px}
+    .step em{font-style:normal;font-size:12px;color:var(--teal);font-weight:800;letter-spacing:.12em}.step h3{font-size:17px;color:var(--navy);margin:8px 0}.step p{font-size:14px;color:var(--muted);margin:0}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
+    .contact-card{background:var(--pale);border-radius:14px;padding:30px}
+    .contact-line{padding:14px 0;border-bottom:1px solid #dbe7eb}.contact-line:last-child{border:0}
+    .contact-line small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+    .contact-line a,.contact-line strong{font-size:17px;color:var(--navy);font-weight:700}
+    footer{background:#0b2034;color:#c1d1db;padding:30px 0;font-size:12px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:800;letter-spacing:.08em}
+    .disclaimer{font-size:12px;color:#8ea4b2;margin-top:15px;max-width:850px}
+    @media(max-width:800px){.navlinks{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;padding:20px 5%;border-bottom:1px solid #e5edf1;flex-direction:column;align-items:flex-start;gap:18px}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.about-grid,.contact{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.hero{padding:80px 0}.coverage-box{align-items:flex-start}}
+    @media(max-width:520px){.cards{grid-template-columns:1fr}section{padding:64px 0}.brand{font-size:12px}.brand small{font-size:8px}.brand-mark{width:38px;height:38px}.hero p{font-size:16px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Future Health Centre home">
+      <span class="brand-mark">✚</span>
+      <span>FUTURE HEALTH CENTRE<small>FOR ADVANCED SURGERY</small></span>
+    </a>
+    <button class="menu" aria-label="Open navigation" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+    <nav class="navlinks">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#network">Our Network</a><a href="#collaboration">Collaboration</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Contact Us</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="eyebrow">Surgical services coordination</div>
+      <h1>Connecting expertise.<br>Coordinating better surgical care.</h1>
+      <p>Future Health Centre for Advanced Surgery works to coordinate surgical services and develop hospital collaborations, with an operational focus across Kerala.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Make an Enquiry</a>
+        <a class="btn-outline" href="#about">Discover Our Approach</a>
+      </div>
+      <div class="hero-note">PROFESSIONAL COORDINATION &nbsp;·&nbsp; HOSPITAL COLLABORATION &nbsp;·&nbsp; KERALA</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div>
+        <div class="section-kicker">About us</div>
+        <h2>A coordinated approach to advanced surgical services.</h2>
+        <p class="intro">We aim to bring together hospitals, surgical professionals and patients through an organized approach to surgical service coordination.</p>
+        <div class="pillars">
+          <div class="pillar"><b>Coordination</b><span>Organized communication and service planning.</span></div>
+          <div class="pillar"><b>Collaboration</b><span>Working with hospitals and qualified professionals.</span></div>
+          <div class="pillar"><b>Patient focus</b><span>Clear information and responsive enquiry support.</span></div>
+        </div>
+      </div>
+      <div class="about-panel">
+        <div class="section-kicker">Our purpose</div>
+        <h2 style="font-size:27px">Building connected surgical care.</h2>
+        <p>Our approach is centred on collaboration with healthcare facilities that have appropriate infrastructure and clinical teams. Specific procedures and services are subject to hospital arrangements, professional availability and individual clinical assessment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="services">
+    <div class="container">
+      <div class="section-kicker">What we do</div>
+      <h2>Surgical service coordination</h2>
+      <p class="intro">We support the coordination and planning of surgical services in collaboration with hospitals and relevant medical professionals.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">✚</div><h3>Surgical Services</h3><p>Coordination of surgical service enquiries and procedure-related arrangements with participating healthcare facilities.</p></article>
+        <article class="card"><div class="icon">⌂</div><h3>Hospital Collaboration</h3><p>Developing working relationships with hospitals that can provide suitable operating theatres, inpatient care and supporting facilities.</p></article>
+        <article class="card"><div class="icon">◎</div><h3>Care Coordination</h3><p>Helping connect enquiries with the relevant hospital teams and professionals for further information and clinical assessment.</p></article>
+      </div>
+      <div class="notice">The availability of any procedure depends on the participating hospital, the treating surgeon and the patient's clinical requirements. Medical decisions are made by qualified treating professionals.</div>
+    </div>
+  </section>
+
+  <section class="coverage" id="network">
+    <div class="container">
+      <div class="section-kicker">Operational network</div>
+      <h2>Our operational area</h2>
+      <p class="intro">Our operational focus is across Kerala, through hospital collaborations and professional coordination.</p>
+      <div class="coverage-box"><div class="coverage-symbol">✧</div><div><strong>Kerala</strong><span>Statewide operational coverage focus</span></div></div>
+    </div>
+  </section>
+
+  <section id="collaboration">
+    <div class="container">
+      <div class="section-kicker">Work with us</div>
+      <h2>Hospital collaboration</h2>
+      <p class="intro">We welcome discussions with hospitals interested in exploring a structured collaboration for surgical services.</p>
+      <div class="steps">
+        <div class="step"><em>01 / CONNECT</em><h3>Start a discussion</h3><p>Share your hospital's details and the services you are interested in discussing.</p></div>
+        <div class="step"><em>02 / EXPLORE</em><h3>Review requirements</h3><p>Discuss infrastructure, clinical support, responsibilities and the proposed service model.</p></div>
+        <div class="step"><em>03 / AGREE</em><h3>Define the arrangement</h3><p>Proceed only after mutually agreed terms, appropriate approvals and applicable regulatory requirements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="contact">
+    <div class="container contact">
+      <div>
+        <div class="section-kicker">Get in touch</div>
+        <h2>Let's connect.</h2>
+        <p class="intro">For surgical service enquiries, hospital collaboration proposals or general information, contact our team.</p>
+        <p style="color:var(--muted);font-size:14px">Please do not send confidential medical records or emergency requests through this website.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-line"><small>Call us</small><a href="tel:+918714145217">+91 8714145217</a></div>
+        <div class="contact-line"><small>Call us</small><a href="tel:+919074346339">+91 90743 46339</a></div>
+        <div class="contact-line"><small>Email</small><a href="mailto:futurehealthsurgery@gmail.com">futurehealthsurgery@gmail.com</a></div>
+        <div class="contact-line"><small>WhatsApp enquiry</small><a href="https://wa.me/918714145217" target="_blank" rel="noopener">Message us on WhatsApp ↗</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row"><div class="footer-brand">FUTURE HEALTH CENTRE FOR ADVANCED SURGERY</div><div>Operational focus: Kerala</div></div>
+    <div class="disclaimer">This website provides general information about surgical service coordination and hospital collaboration. It is not a substitute for medical advice, diagnosis or treatment. Services are subject to availability, hospital arrangements and applicable professional and regulatory requirements.</div>
+    <div style="margin-top:18px;color:#78909f">© <span id="year"></span> Future Health Centre for Advanced Surgery. All rights reserved.</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));</script>
+</body>
+</html>
